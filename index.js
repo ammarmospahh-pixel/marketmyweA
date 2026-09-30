@@ -36,7 +36,7 @@ let productsArray = [];
 let activeProductId = null; 
 
 // 🔗 رابط Google Apps Script المحدث والمعتمد
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzstImEtArx34MLITcnLwxSc3FCRgKVYjzrMH98UBZ73EfxPU9LjLiiyzECWSIXxx3Xsw/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxnyFzeaiWPAIE1X4UctA8Q7dOeXBQvIL58uaID8Xc7RrTur6ufMhq4Xzg_aKSuaWJn_g/exec";
 
 // ==========================================
 // دالة جلب المنتجات (تعتمد على الكاش للظهور الفوري)

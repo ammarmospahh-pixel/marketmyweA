@@ -1,8 +1,8 @@
 // ==========================================
 // 1. الإعدادات والمتغيرات الرئيسية
 // ==========================================
-const MY_WHATSAPP_NUMBER = '201501893345';
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPVHikzUab0n7EqKgDaE1sZ7pqZ0Q7AL3LJeUTQrdKPy6qRzzpkSxxjJjWSmurGNW8Tg/exec';
+const MY_WHATSAPP_NUMBER = '201097734613';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2TfxFMn1oybx9lO4zOpWmdMer-id6SB7P1xleQmVurrIRkNm_0RQ14MxFCojX13Tsvw/exec';
 
 // جلب ID العميل الحالي
 function getCurrentUserId() {

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const idInput = document.getElementById('user-id') || document.querySelectorAll('input')[0];
   const passwordInput = document.getElementById('user-password') || document.querySelectorAll('input')[1];
 
-  const GOOGLE_SHEET_API = 'https://script.google.com/macros/s/AKfycbwSYST86fGm7UrUjUuLzRzWpm_N84DepM--Rw-xMTmICj1JCXm63y_s6aeikxKZabEN7A/exec';
+  const GOOGLE_SHEET_API = 'https://script.google.com/macros/s/AKfycbxIS1vzCL9rrsEcvPlQhDAtFytHzyjfQnJCmYpVr9UiXVhmaw9WG-T-hRU2Q26xog/exec';
 
   if (loginForm) {
     loginForm.addEventListener('submit', (e) => {

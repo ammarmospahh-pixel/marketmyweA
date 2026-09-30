@@ -1,8 +1,8 @@
 // ==========================================
 // إعدادات الروابط والبيانات
 // ==========================================
-const GOOGLE_SHEET_POST_URL = 'https://script.google.com/macros/s/AKfycbzFaMA5IrXkuljsgR3U3tfO1ji9v9pw4_mGCveYqRMRupRpM3qU_7X8fano07DYfFC4vQ/exec';
-const MY_WHATSAPP_NUMBER = '201501893345';
+const GOOGLE_SHEET_POST_URL = 'https://script.google.com/macros/s/AKfycbz2TfxFMn1oybx9lO4zOpWmdMer-id6SB7P1xleQmVurrIRkNm_0RQ14MxFCojX13Tsvw/exec';
+const MY_WHATSAPP_NUMBER = '201097734613';
 
 // ==========================================
 // 1. تحديد ID العميل الحالي

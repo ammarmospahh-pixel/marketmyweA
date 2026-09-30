@@ -1,7 +1,7 @@
 // ==========================================
 // 1. الإعدادات والرابط
 // ==========================================
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzqz8dWhu2tXYVCoNhAVAimExlOji5PjkSQ6FuLsEDCNr9-PMCnByc69SPZMmS_pWY8Fg/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxIS1vzCL9rrsEcvPlQhDAtFytHzyjfQnJCmYpVr9UiXVhmaw9WG-T-hRU2Q26xog/exec';
 
 // دالة لتحويل رابط جوجل دريف العادي إلى رابط مباشر للصورة
 function convertGoogleDriveLink(url) {
