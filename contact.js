@@ -1,8 +1,8 @@
 // ==========================================
 // 1. الإعدادات والمتغيرات الرئيسية
 // ==========================================
-const MY_WHATSAPP_NUMBER = '201097734613';
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2TfxFMn1oybx9lO4zOpWmdMer-id6SB7P1xleQmVurrIRkNm_0RQ14MxFCojX13Tsvw/exec';
+const MY_WHATSAPP_NUMBER = '201501893345';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPVHikzUab0n7EqKgDaE1sZ7pqZ0Q7AL3LJeUTQrdKPy6qRzzpkSxxjJjWSmurGNW8Tg/exec';
 
 // جلب ID العميل الحالي
 function getCurrentUserId() {
@@ -12,7 +12,20 @@ function getCurrentUserId() {
   }
   return 'guest';
 }
+// -------------للادمن فقط
+document.addEventListener('DOMContentLoaded', () => {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  const adminLinks = document.querySelectorAll('a[href="admin.html"]');
 
+  // تحقق مما إذا كان المستخدم هو الأدمن
+  const isAdmin = currentUser && (currentUser.role === 'admin' || currentUser.id === 'رقم_ايدي_الادمن');
+
+  adminLinks.forEach(link => {
+    if (!isAdmin) {
+      link.style.display = 'none'; // إخفاء الرابط تماماً إذا لم يكن أدمن
+    }
+  });
+});
 // ==========================================
 // 2. تحديث الهيدر والبيانات بجميع الكروت
 // ==========================================

@@ -10,7 +10,20 @@ function shuffleArray(array) {
   }
   return shuffled;
 }
+// -------------للادمن فقط
+document.addEventListener('DOMContentLoaded', () => {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  const adminLinks = document.querySelectorAll('a[href="admin.html"]');
 
+  // تحقق مما إذا كان المستخدم هو الأدمن
+  const isAdmin = currentUser && (currentUser.role === 'admin' || currentUser.id === 'رقم_ايدي_الادمن');
+
+  adminLinks.forEach(link => {
+    if (!isAdmin) {
+      link.style.display = 'none'; // إخفاء الرابط تماماً إذا لم يكن أدمن
+    }
+  });
+});
 // ==========================================
 // دالة تحويل روابط Google Drive إلى رابط صورة مباشر
 // ==========================================
@@ -36,7 +49,7 @@ let productsArray = [];
 let activeProductId = null; 
 
 // 🔗 رابط Google Apps Script المحدث والمعتمد
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxnyFzeaiWPAIE1X4UctA8Q7dOeXBQvIL58uaID8Xc7RrTur6ufMhq4Xzg_aKSuaWJn_g/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzstImEtArx34MLITcnLwxSc3FCRgKVYjzrMH98UBZ73EfxPU9LjLiiyzECWSIXxx3Xsw/exec";
 
 // ==========================================
 // دالة جلب المنتجات (تعتمد على الكاش للظهور الفوري)

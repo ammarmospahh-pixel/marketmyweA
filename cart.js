@@ -1,8 +1,8 @@
 // ==========================================
 // إعدادات الروابط والبيانات
 // ==========================================
-const GOOGLE_SHEET_POST_URL = 'https://script.google.com/macros/s/AKfycbz2TfxFMn1oybx9lO4zOpWmdMer-id6SB7P1xleQmVurrIRkNm_0RQ14MxFCojX13Tsvw/exec';
-const MY_WHATSAPP_NUMBER = '201097734613';
+const GOOGLE_SHEET_POST_URL = 'https://script.google.com/macros/s/AKfycbzFaMA5IrXkuljsgR3U3tfO1ji9v9pw4_mGCveYqRMRupRpM3qU_7X8fano07DYfFC4vQ/exec';
+const MY_WHATSAPP_NUMBER = '201501893345';
 
 // ==========================================
 // 1. تحديد ID العميل الحالي
@@ -21,7 +21,20 @@ function getCurrentUserId() {
 
   return 'guest';
 }
+// -------------للادمن فقط
+document.addEventListener('DOMContentLoaded', () => {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  const adminLinks = document.querySelectorAll('a[href="admin.html"]');
 
+  // تحقق مما إذا كان المستخدم هو الأدمن
+  const isAdmin = currentUser && (currentUser.role === 'admin' || currentUser.id === 'رقم_ايدي_الادمن');
+
+  adminLinks.forEach(link => {
+    if (!isAdmin) {
+      link.style.display = 'none'; // إخفاء الرابط تماماً إذا لم يكن أدمن
+    }
+  });
+});
 // ==========================================
 // 2. إدارة السلة وتجهيز دالة addToCart
 // ==========================================
